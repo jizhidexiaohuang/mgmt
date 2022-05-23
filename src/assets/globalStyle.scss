@@ -1,0 +1,31 @@
+$globalMainColor:#3a5bae;
+$successColor:#4cb455;
+$errorColor:#ff5555;
+$normalColor:#e6ebf1;
+$warningColor:#ffa43b;
+$infoColor:#2db7f5;
+$expireColor:#c5c5c5;
+$borderColor:#ebeaf0;
+$labelBorder:#d5d8dd;
+$textColor:#4b4b4b;
+$labelColor:#909090;
+$labelBg:#f7f8fa;
+$disabledColor:#c5c8ce;
+$yellowColor:#FFC726;
+
+:export {
+    globalMainColor:$globalMainColor;
+    successColor:$successColor;
+    errorColor:$errorColor;
+    normalColor:$normalColor;
+    warningColor:$warningColor;
+    infoColor:$infoColor;
+    expireColor:$expireColor;
+    borderColor:$borderColor;
+    labelBorder:$labelBorder;
+    textColor:$textColor;
+    labelColor:$labelColor;
+    labelBg:$labelBg;
+    disabledColor:$disabledColor;
+    yellowColor:$yellowColor
+}

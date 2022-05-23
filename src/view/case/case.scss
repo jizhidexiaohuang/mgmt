@@ -1,0 +1,26 @@
+@import './../../assets/globalStyle.scss';
+.case-tabs{
+    margin-bottom:15px;
+    overflow: hidden;
+    border-bottom:0;
+    >li{
+        background: #EDECFF;
+        float: left;
+        padding: 5px 16px 5px;
+        border:1px solid $globalMainColor;
+        border-right:0;
+        color:$globalMainColor;
+        &:first-child{
+            border-radius: 2px 0 0 2px;
+        }
+        &:last-child{
+            border-right:1px solid $globalMainColor;
+            border-radius: 0 2px 2px 0;
+        }
+        cursor: pointer;
+        &.active{
+            background: $globalMainColor;
+            color:#fff;
+        }
+    }
+}

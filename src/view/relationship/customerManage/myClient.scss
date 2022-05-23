@@ -1,0 +1,13 @@
+@import "./../../../assets/globalStyle";
+.relationship{
+    /deep/ .customer-name{
+        cursor:pointer;
+        color:$globalMainColor;
+        width:100%;
+        display:inline-block;
+        vertical-align: middle;
+    }
+}
+
+
+

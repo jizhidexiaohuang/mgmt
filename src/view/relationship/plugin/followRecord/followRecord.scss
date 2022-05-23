@@ -1,0 +1,38 @@
+@import "./../../../../assets/globalStyle";
+
+.follow-record-img-list{
+    display: inline-block;
+    margin-left: 25px;
+    height: 30px;
+    overflow: hidden;
+    vertical-align: middle;
+    .follow-record-img{
+        float: left;
+        width:30px;
+        height: 30px;
+        border-radius: 50%;
+        background-color: #d5d8dd;
+        position: relative;
+        text-align: center;
+        overflow: hidden;
+        margin-right: 6px;
+        span{
+            position: absolute;
+            top:50%;
+            transform: translateY(-50%);
+            font-size:12px;
+            line-height:30px;
+            color: $textColor;
+            width:100%;
+            left:0;
+        }
+        .has-img-span{
+            color: #fff;
+            background-color: #000000;
+	        opacity: 0.6;
+        }
+        >img{
+            width:100%;
+        }
+    }
+}

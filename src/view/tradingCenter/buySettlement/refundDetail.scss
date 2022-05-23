@@ -1,0 +1,104 @@
+@import "@/assets/globalStyle.scss";
+/* 表格样式 */
+table,table tr th, table tr td { border:1px solid #ECECEE; }
+table { text-align: center; border-collapse: collapse;}
+.print-table,.print-table tr th, .print-table tr td { border:1px solid #979797; }
+.table-box{
+    padding-top:10px;
+    .no-inside-border{
+        td{
+            border: none;
+        }
+    }
+}
+.table-box .tc{
+    text-align: center;
+}
+.table-box .tl{
+    text-align: left;
+}
+.table-box .tr{
+    text-align: right;
+}
+.subject-table {
+    width:100%;
+}
+.subject-table .subject-table-color,.subject-table thead th{
+    background: #F7F6FD;
+    font-weight: normal;
+}
+.subject-header-table th,.subject-header-table td,.subject-noheader-table td{
+    padding:13px 30px;
+    font-size: 14px;
+}
+.subject-noheader-table .subject-table-color{
+    width:200px;
+}
+.subject-layer{
+    color:$infoColor;
+    cursor: pointer;
+}
+.fix-height{
+    height: 150px;
+}
+.underline-box{
+    float: left;
+    margin-right: 15px;
+    width:calc(16.66% - 12.5px);
+    border-bottom:1px solid #979797;
+    &:last-child{
+        margin-right: 0;
+    }
+    span{
+        display: inline-block;
+        height: 100%;
+        background-color: #fff;
+        transform: translateY(2px);
+    }
+}
+.icon-down-01{
+    color: $errorColor;
+    cursor: pointer;
+    font-size: 16px;
+}
+.btn-box{
+    margin-top: 40px;
+}
+.operate-box{
+    position: absolute;
+    right:15px;
+    top:3px;
+    font-size:20px;
+    cursor: pointer;
+    .close-icon{
+        margin-left: 10px;
+    }
+}
+.print-box{
+    padding:10px 40px;
+    position: inherit;
+}
+.long-table{
+    padding-top: 15px;
+}
+.long-table td{
+    padding:13px 10px;
+    font-size: 12px;
+}
+.close-modal-icon{
+    position: absolute;
+    right:15px;
+    top:10px;
+    font-size:20px;
+    cursor: pointer;
+}
+.long-table .close-modal-icon{
+    top:5px;
+}
+
+.remarks-box{
+    padding:4px 7px;
+    height: 100px;
+    border: 1px solid #eee;
+    overflow: auto;
+}

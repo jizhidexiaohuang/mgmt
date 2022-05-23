@@ -1,0 +1,193 @@
+@import "./../../assets/globalStyle";
+
+.login-bg{
+    width:100%;
+    height: 100%;
+    position: relative;
+    background-image: url('./../../assets/images/mgmt-bg.jpg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    display: flex;
+    .login-box{
+        width:74%;
+        height: 74%;
+        background: #fff;
+        margin:auto;
+        border-radius: 20px;
+        position: relative;
+        .icon-hexagon{
+            position: absolute;
+            width: 14%;
+            height: 28%;
+            top: 4%;
+            left: -7%;
+        }
+        .login-box-left{
+            width: 46%;
+            height: 100%;
+            float: left;
+            position: relative;
+            >img{
+                position: absolute;
+                width: 51%;
+                height: 9%;
+                top: 8%;
+                left: 18%;
+            }
+            h2{
+                position: absolute;
+                top:20%;
+                left:18%;
+                font-size: 30px;
+                font-weight: normal;
+            }
+            .login-form{
+                position: absolute;
+                width:65%;
+                height: 62%;
+                top:30%;
+                left:18%;
+            }
+            .login-btn{
+                width:100%;
+                border-radius: 10px;
+                height: 40px;
+                background: $globalMainColor;
+                margin:9% 0;
+                color:#fff;
+            }
+            ul{
+                margin-bottom:8%;
+                display: flex;
+                flex-wrap: nowrap;
+                // justify-content: space-between;
+                li{
+                    height: 40px;
+                    line-height: 40px;
+                    font-size: 16px;
+                    margin-right: 20px;
+                    cursor: pointer;
+                    position: relative;
+                    &.active{
+                        color:$globalMainColor;
+                        &:after{
+                            display: block;
+                        }
+                    }
+                    &:after{
+                        content:'';
+                        display: none;
+                        position: absolute;
+                        width:70%;
+                        height: 3px;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        background: $globalMainColor;
+                    }
+                }
+            }
+            .input-box{
+                width:100%;
+                margin-bottom:24px;
+                position: relative;
+                input{
+                    width: 100%;
+                    height: 36px;
+                    line-height: 36px;
+                    border-color:transparent;
+                    background-color:#f0f2f9;
+                    border-radius: 20px;
+                    padding-left:40px;
+                    &:focus{
+                        outline: none;
+                    }
+                }
+                span.icon{
+                    position: absolute;
+                    left:15px;
+                    top:50%;
+                    transform: translateY(-50%);
+                    color:$globalMainColor;
+                }
+                .tips-icon{
+                    position: absolute;
+                    top:50%;
+                    transform: translateY(-50%);
+                    right:10px;
+                    font-weight: bold;
+                }
+                .err-tips{
+                    position: absolute;
+                    left:20px;
+                    color:red;
+                    font-size: 12px;
+                    top:38px;
+                }
+                .text{
+                    position: absolute;
+                    right:15px;
+                    top:50%;
+                    transform: translateY(-50%);
+                }
+                .send-verification-code{
+                    cursor: pointer;
+                    color:$globalMainColor;
+                }
+                .resend{
+                    color:#515a6e;
+                }
+            }
+            .retrieve-password{
+                line-height: 40px;
+                font-size: 16px;
+                p{
+                    float: right;
+                    a{
+                        color:$globalMainColor;
+                    }
+                }
+            }
+            p.register{
+                position: absolute;
+                text-align: center;
+                font-size: 16px;
+                bottom:10%;
+                left:50%;
+                transform: translateX(-50%);
+                a{
+                    color:$globalMainColor;
+                }
+            }
+            .qrcode-box{
+                text-align: center;
+            }
+        }
+        .login-box-right{
+            width: 54%;
+            height: 100%;
+            float: left;
+            position: relative;
+            img{
+                width: 80%;
+                height: 90%;
+                position: absolute;
+                top: 5%;
+                left: 5%;
+            }
+        }
+    }
+}
+.impowerBox .title{
+    display: none!important;
+}
+.wechat-error{
+    width:200px;
+    height: 200px;
+    border:1px solid $borderColor;
+    font-size: 14px;
+    margin:0 auto;
+    margin-top: 45px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 200px;
+}

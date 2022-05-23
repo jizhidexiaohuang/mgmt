@@ -1,0 +1,61 @@
+export default {
+    Workbench: '工作台',
+    Taskhall: '任务大厅',
+    Doingtasks: '在办任务',
+    Team: '团队',
+    Financ: '财务',
+    Riskloan: '风险投',
+    Cluetask: '线索发现任务',
+    publictask: '公共任务',
+    designatetask: '指派任务',
+    Casetask: '案件打击任务',
+    publiccase: '公共案件',
+    designatecase: '指派案件',
+    Cluefind: '线索',
+    Casetask: '案件',
+    Mytask: '我的任务',
+    Alltask: '全部任务',
+    Myresult: '我的结果',
+    Allresult: '全部结果',
+    Mycase: '我的案件',
+    Inprogress: '进行中',
+    Ended: '已结束',
+    Allcase: '全部案件',
+    AwaitAllocationCase: '待分配案件',
+    MyTransactionCase: '我的出售案件',
+    Processing: '出售中',
+    Transacted: '已出售',
+    AllTransactionCase: '全部出售案件',
+    Teammanagement: '人员管理',
+    JobPermissions: '职务权限',
+    Mycenter: '个人中心',
+    Resetpwd: '修改密码',
+    Exit: '退出',
+    certificateType:{
+        'IC':'身份证',
+        'PP':'护照'
+    },
+    'ID-type':'证件类型',
+    tort_type:{
+        'E_EC':'电商平台',
+        'S_ST':'实体店铺',
+        'S_FA':'工厂',
+        'S_OT':'其他',
+        'E_WL':'网页链接'
+    },
+    ec_channel:{
+        'TT':'淘宝',
+        'TM':'天猫',
+        'AL':'阿里巴巴',
+        'JD':'京东',
+        'SN':'苏宁',
+        'YH':'1号店',
+        'PD':'拼多多',
+        'OT':'其他'
+    },
+    property:{
+        "E":"法定代表人",
+        "I":"经营者"
+    },
+  }
+  

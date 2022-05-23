@@ -1,0 +1,75 @@
+@import './../../assets/globalStyle.scss';
+.case-detail{
+    display: block;
+    position: absolute;
+    left: 0;
+    top: -32px;
+    bottom:0;
+    z-index:999;
+    overflow: auto;
+    width: 100%;
+    background:#fff;
+    .more-options{
+        position: absolute;
+        top: 10px;
+        right: 50px;
+        z-index: 10;
+    }
+    .close-icon{
+        position: absolute;
+        right:15px;
+        top:3px;
+        font-size: 20px;
+        cursor: pointer;
+    }
+    .case-title{
+        height: 45px;
+        line-height: 50px;
+        font-size: 14px;
+        padding-left:25px;
+        border-bottom:1px solid $borderColor;
+        width:100%;
+    }
+    .case-content{
+        padding-top:10px;
+        line-height: 30px;
+        padding-left:25px;
+        .case-detail-row{
+            width:calc(100% - 120px);
+        }
+    }
+    .case-detail-box{
+        float: left;
+        width:100%;
+        overflow: hidden;
+        .case-detail-tabs{
+            border-bottom:1px solid $borderColor;
+        }
+        .case-detail-container{
+            width:100%;
+            height:calc(100% - 49px);
+            overflow:auto;
+        }
+        .tabs-bar{
+            border:none;
+        }
+        .common-tabs-bar{
+            width:100%;
+            // display: flex;
+            // flex-wrap: nowrap;
+            // justify-content: space-around;
+            li{
+                padding:0 25px;
+                float: left;
+            }
+        }
+    }
+    .case-agreement{
+        // padding-top:10px;
+        margin:10px 10px 20px;
+        width:100%;
+        max-width: 800px;
+        background: #fff;
+        border: 1px solid $borderColor;
+    }
+}

@@ -1,0 +1,43 @@
+@import "@/assets/globalStyle.scss";
+.materials-box{
+    position: relative;
+    height: calc(100% - 50px);
+    padding-left: 220px;
+    .materials-sort-list{
+        padding:10px 15px;
+        border-right: 1px solid $borderColor;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 220px;
+        height: 100%;
+        overflow-y: auto;
+        background: #ffffff;
+        li{
+            margin-bottom: 6px;
+            cursor: pointer;
+            i{
+                vertical-align: bottom;
+                margin-right: 5px;
+                color:$globalMainColor;
+                font-size: 21px;
+            }
+            .materials-list-title{
+                display: inline-block;
+                width:calc(100% - 32px);
+                &:hover {
+                    background-color: #eaf4fe;
+                }
+            }
+            .list-title-selected{
+                background-color: #eaf4fe;
+            }
+        }
+    }
+    .materials-sort-content{
+        padding:10px 15px;
+        .sort-btn-box{
+            margin-bottom: 10px;
+        }
+    }
+}

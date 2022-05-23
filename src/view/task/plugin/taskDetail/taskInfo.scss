@@ -1,0 +1,91 @@
+@import "./../../../../assets/globalStyle.scss";
+.task-info{
+    padding: 55px 0px 0 75px;
+    position: relative;
+    overflow: hidden;
+    .anchor{
+        position: absolute;
+        left:0;
+        width: 65px;
+        p{
+            position: relative;
+            height: 70px;
+            font-size: 14px;
+            font-weight: 700;
+            text-align: right;
+            cursor: pointer;
+            .icon-result{
+                margin-right:18px;
+            }
+            &.active a{
+                color:#B5BAC0;
+            }
+            &:hover a{
+                color:$globalMainColor;
+            }
+            a{
+                color:#B5BAC0;
+            }
+            .icon-active{
+                color:$globalMainColor;
+            }
+            .icon{
+                display: inline-block;
+                width: 22px;
+                height: 22px;
+                margin:0px 12px;
+                text-align: center;
+                border-radius: 50%;
+                line-height: 22px;
+                background: #EEEDF2;
+            }
+            .no-radius{
+                color:#B5BAC0;
+                font-size: 22px;
+                background: none;
+            }
+            .line{
+                display: inline-block;
+                height: 50px;
+                width: 1px;
+                background: #d8d8d8;
+                position: absolute;
+                top: 20px;
+                right: 22px;
+            }
+        }
+        .spec-p{
+            height: 40px;
+        }
+    }
+    .task-result{
+        padding-right:20px;
+        .result-content /deep/ .ivu-tooltip-rel{
+            height:20px;
+            margin-bottom:20px;
+        }
+        .result-title{
+            font-size: 14px;
+            font-weight: 900;
+            color: $globalMainColor;
+            margin-bottom: 10px;
+        }
+        .result-subtitle{
+            margin:10px 0;
+        }
+        p{
+            width:50%;
+            float: left;
+            line-height: 30px;
+            .icon{
+                font-size: 16px;
+                color:#d8d8d8;
+                margin:0 5px;
+                cursor: pointer;
+                &:hover{
+                    color:$globalMainColor;
+                }
+            }
+        }
+    }
+}

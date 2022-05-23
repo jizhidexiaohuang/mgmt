@@ -1,0 +1,57 @@
+@import '@/assets/globalStyle.scss';
+.project-box{
+    position: relative;
+}
+.container{
+    padding:20px;
+}
+.btn-img{
+    text-align: center;
+    margin-bottom:20px;
+    .btn-box{
+        height: auto;
+        padding:15px 0px;
+        text-align: center;
+        width:calc(50% - 10px);
+        border:1px dashed $borderColor;
+        border-radius: 2px;
+        cursor: pointer;
+        &:hover{
+            border-color:#57a3f3;
+        }
+        p{
+            line-height: 24px;
+            font-size: 14px;
+            &.tips-p{
+                width:100%;
+                line-height: 20px;
+                font-size: 12px;
+                padding:0px 10px;
+                box-sizing: border-box;
+                color:$expireColor;
+            }
+        }
+        &:nth-of-type(1){
+            margin-right:10px;
+            float: left;
+        }
+        &:nth-of-type(2){
+            margin-left:10px;
+            float: right;
+        }
+    }
+    img{
+        width:44px;
+        height: 52px;
+    }
+}
+.text-row{
+    padding:15px;
+    background: #F2F9FF;
+    border:1px solid $borderColor;
+    line-height: 24px;
+}
+.notice{
+    font-size: 14px;
+    font-weight: 600;
+}

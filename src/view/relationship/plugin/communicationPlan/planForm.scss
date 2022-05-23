@@ -1,0 +1,46 @@
+@import "./../../../../assets/globalStyle";
+.plan-form-padding{
+    padding:10px 20px;
+}
+.tag{
+    padding: 2px 7px;
+    background-color: #fff;
+    width:100%;
+    line-height: 26px;
+    .add-tag{
+        display:inline;
+        border:1px solid $globalMainColor;
+        margin-left: 2px;
+        border-radius: 3px;
+        padding:3px 5px;
+        box-sizing: border-box;
+        font-size: 12px;
+        cursor: pointer;
+        color:$textColor;
+        &:hover{
+            border:1px solid $globalMainColor;
+        }
+        &:first-child{
+            margin-left: 0;
+        }
+    }
+    .add-btn{
+        border:1px dashed $borderColor;
+        transition: all .5s;
+        margin-left: 0;
+        display: inline-block;
+        line-height: 11px;
+        &:hover{
+            border:1px dashed $globalMainColor;
+            color:$globalMainColor
+        }
+    }
+}
+.plan-edit-form-btn{
+    padding:10px 20px;
+    text-align: right;
+    background: #fff;
+}
+.plan-center-form-btn{
+    text-align: center;
+}

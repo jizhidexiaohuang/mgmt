@@ -1,0 +1,58 @@
+@import '@/assets/globalStyle.scss';
+.step-box{
+    padding:30px 40px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: nowrap;
+    >div{
+        float:left;
+    }
+    .step-icon-box{
+        // width:12%;
+        text-align: center;
+        cursor: pointer;
+        i{
+            font-size: 25px;
+            color:$expireColor;
+        }
+        .icon-down-01{
+            color:$errorColor;
+        }
+    }
+    .step-line{
+        width:40%;
+        i{
+            display: inline-block;
+            width:100%;
+            height: 1px;
+            background:$borderColor;
+        }
+    }
+}
+.tag{
+    height: auto;
+    border:1px solid $borderColor;
+    padding: 4px 7px;
+}
+.add-icon,.remove-icon{
+    position: absolute;
+    right:6px;
+    top: 50%;
+    margin-top:-16px;
+    color:$globalMainColor;
+    font-size: 16px;
+    cursor: pointer;
+    line-height: 32px;
+    margin-left:10px;
+}
+.remove-icon{
+    color:$errorColor;
+}
+.require-tips{
+    position: absolute;
+    left: 60px;
+    font-size: 12px;
+    color:$errorColor;
+    line-height: 33px;
+    font-family: SimSun;
+}

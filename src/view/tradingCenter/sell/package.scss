@@ -1,0 +1,53 @@
+@import "@/assets/globalStyle.scss";
+.case-package-box{
+    display: grid;
+    grid-template-columns: repeat(5,calc(20% - 7.5px));
+    grid-gap: 10px;
+    .case-package-item{
+        padding:10px 12px;
+        border:1px solid $borderColor;
+        font-size: 13px;
+        .package-header{
+            .package-title{
+                font-size:16PX;
+                font-weight:600;
+                color:$globalMainColor;
+                vertical-align: middle;
+                margin-right: 5px;
+                cursor: pointer;
+            }
+        }
+        .package-content{
+            .package-row{
+                margin-top: 13px;
+                .left-label{
+                    color:#909090;
+                }
+                .large-text{
+                    color: #ffa43b;
+                    font-size: 16px;
+                    font-weight: 600;
+                }
+                .error-time{
+                    color:$errorColor;
+                    font-weight: 600;
+                    font-size: 12px;
+                    text-align: right;
+                    margin-top: 4px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1640px) {
+    .case-package-box{
+        grid-template-columns: repeat(4,calc(25% - 7.5px));
+    }
+}
+
+@media (max-width: 1350px) {
+    .case-package-box{
+        grid-template-columns: repeat(3,calc(33.33% - 7.5px));
+    }
+}

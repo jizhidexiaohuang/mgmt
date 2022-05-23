@@ -1,0 +1,46 @@
+@import '@/assets/globalStyle.scss';
+.detail-form{
+    padding:20px 20px 0 0;
+    position: relative;
+    .tag{
+        height: auto;
+        border:1px solid $borderColor;
+        padding: 4px 7px;
+    }
+}
+.drawer-header{
+    height: 40px;
+    line-height: 40px;
+    width:100%;
+    background: #f7f7f7;
+    padding-left:15px;
+    margin-bottom:24px;
+    border-top:1px solid #eee;
+    border-bottom:1px solid #eee;
+}
+.add-icon,.remove-icon{
+    font-size: 16px;
+    color:$globalMainColor;
+    cursor: pointer;
+    line-height: 32px;
+    z-index: 2;
+}
+.divider{
+    width:100%;
+    height:1px;
+    background: #eee;
+    position: absolute;
+    top:0px;
+}
+.add-icon{
+    float: right;
+}
+.remove-icon{
+    color:$errorColor;
+    position: absolute;
+    top: -5px;
+    right: 18px;
+}
+.clue-tort-subject,.clue-manufacturer{
+    margin-bottom: 10px;
+}

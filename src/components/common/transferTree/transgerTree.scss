@@ -1,0 +1,82 @@
+@import '@/assets/globalStyle.scss';
+.transfer-tree{
+    width:100%;
+    background: #fff;
+    box-sizing: border-box;
+    .transfer-left{
+        float: left;
+        width: 50%;
+        border-right:1px solid $borderColor;
+        .transfer-left-input{
+            padding-right: 20px;
+        }
+        .transfer-left-tree{
+            padding-right:20px;
+            height:300px;
+            overflow-y: auto;
+            margin-top:5px;
+        }
+        .transfer-left-render-list{
+            padding-left:0;
+            margin-top: 10px;
+        }
+    }
+    .transfer-right{
+        width:50%;
+        float: right;
+        .transfer-right-summary{
+            padding:0px 20px;
+            height:30px;
+            line-height:30px;
+            .transfer-right-summary-text{
+                margin:0 5px;
+            }
+        }
+    }
+    .transfer-full-screen{
+        width:100%;
+        border-right:none;
+    }
+    .transfer-common-list{
+        height:300px;
+        padding:0px 20px;
+        overflow-y: auto;
+        margin-top: 5px;
+        li{
+            position: relative;
+            margin-bottom: 10px;
+            &:last-child{
+                margin-bottom: 0;
+            }
+            >img{
+                width:30px;
+                height:30px;
+                margin-right: 8px;
+                position: absolute;
+                left:0;
+            }
+            >div{
+                height:30px;
+                line-height:30px;
+                width:100%;
+                padding-left:40px;
+                >span{
+                    font-size: 14px;
+                }
+                .transfer-delete-icon{
+                    float: right;
+                    color:#BBBCBF;
+                    font-size: 20px;
+                    line-height: 30px;
+                    cursor: pointer;
+                    &:hover{
+                        color:$errorColor;
+                    }
+                }
+                .transfer-single-checkbox{
+                    float:right;
+                }
+            }
+        }
+    }
+}

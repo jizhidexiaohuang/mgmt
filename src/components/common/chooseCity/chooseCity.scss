@@ -1,0 +1,116 @@
+@import '@/assets/globalStyle.scss';
+.city-select{
+    width:100%;
+    min-height: 30px;
+    border:1px solid $borderColor;
+    cursor: pointer;
+    padding:0px 5px;
+}
+.city-select.active,.city-select:hover{
+    border-color:#57a3f3;
+    box-shadow: 0 0 0 2px rgba(45,140,240,.2);
+}
+.city-select .tag{
+    height: 24px;
+    line-height: 22px;
+    margin: 3px 4px 3px 0;
+    position: relative;
+    display: inline-block;
+    padding: 0 2px 0px 8px;
+    border: 1px solid $borderColor;
+    border-radius: 3px;
+    background: #f7f7f7;
+    font-size: 12px;
+    vertical-align: middle;
+    opacity: 1;
+    overflow: hidden;
+    cursor: pointer;
+}
+.city-list{
+    width:100%;
+    opacity: 0;
+    border:2px solid $borderColor;
+    margin-top:10px;
+    position: relative;
+    &.active{
+        opacity: 1;
+        height: auto;
+        transition: all 0.2s;
+    }
+    &::before,&::after{
+        content: '';
+        display: block;
+        width: 0;
+        height: 0;
+        border-width: 10px;
+        border-style: solid;
+        position: absolute;
+        border-color: transparent transparent $borderColor transparent ;
+        left: 20px;
+        top: -21px;
+        z-index: 10001;
+    }
+    &::after{
+        border-color: transparent transparent #fff transparent ;
+        left: 20px;
+        top: -19px;
+    }
+}
+ul{
+    padding:5px;
+    background: #fff;
+    li{
+        float: left;
+        line-height: 30px;
+        padding:0 5px;
+        cursor: pointer;
+        margin:0 5px 5px 0px;
+    }
+    .first-city{
+        border:1px solid transparent;
+        &::after{
+            position: absolute;
+            content: '';
+            display: none;
+            width:100%;
+            height: 1px;
+            background: #fff;
+            bottom:-1px;
+            left:0px;
+        }
+    }
+}
+
+.second-city>li.active{
+    background: #eee;
+}
+.first-city.active .second-city{
+    display: block;
+}
+.first-city.active::after{
+    display: block;
+}
+.first-city.active{
+    border-color:$globalMainColor;
+    box-sizing: border-box;
+    color:$globalMainColor;
+}
+.first-city.city-selected{
+    background: $globalMainColor;
+    color: #fff;
+}
+.second-city{
+    position: absolute;
+    width:480px;
+    height: auto;
+    right:0px;
+    border:1px solid $globalMainColor;
+    display: none;
+    z-index: 999;
+    box-shadow: rgba(73, 136, 235, 0.2) -4px 0px 15px 0px;
+    color:#030303;
+}
+.third-city.active{
+    background: $globalMainColor;
+    color: #fff;
+}

@@ -1,0 +1,29 @@
+@import '@/assets/globalStyle.scss';
+.sel-ab-box{
+    position: absolute;
+    top:0;
+    width: 100%;
+}
+.demo-upload-horizontal-list{
+    >div{
+        &:first-child{
+            border-top:1px solid $borderColor;
+        }
+        line-height: 35px;
+        border-bottom:1px solid $borderColor;
+        font-size: 12px;
+    }
+    .list-td{
+        /deep/ img{
+            width:28px;
+            height:28px;
+            vertical-align: middle;
+        }
+    }
+    .sm-width{
+        width:50px;
+    }
+    .lg-width{
+        width:calc(100% - 100px);
+    }
+}

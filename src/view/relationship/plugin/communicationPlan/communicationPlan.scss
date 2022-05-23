@@ -1,0 +1,80 @@
+@import "./../../../../assets/globalStyle";
+
+.search-header{
+    padding:10px 0;
+}
+.add-text-btn{
+    line-height:30px;
+    font-size: 14px;
+    color:$globalMainColor;
+    position: relative;
+    cursor: pointer;
+    padding-right: 20px;
+    transition: color 0.6s;
+    &:hover{
+        color:#617CBE;
+    }
+    i{
+        position: absolute;
+        right:0;
+        top:50%;
+        transform: translateY(-50%);
+    }
+}
+.plan-content-box{
+    .plan-content-list-box{
+        .plan-content-detail{
+            border:1px solid $borderColor;
+            border-top:3px solid $globalMainColor;
+            margin-bottom: 15px;
+            .plan-content-header{
+                position: relative;
+                padding:10px 20px;
+                font-size: 14px;
+                background: #f7f8fa;
+                color:$textColor;
+                .header-icon{
+                    width: 2px;
+                    height: 10px;
+                    background: #6766ff;
+                    position: absolute;
+                    top:50%;
+                    left:20px;
+                    transform: translateY(-50%);
+                }
+                .header-title{
+                    margin-left: 10px;
+                    line-height: 27px;
+                }
+                .header-btn-box{
+                    float:right;
+                }
+            }
+            .plan-content-body{
+                padding:10px 20px;
+                .plan-content-label{
+                    width:60px;
+                    float: left;
+                }
+                .plan-content-text{
+                    width:calc(100% - 60px);
+                    float: left;
+                }
+                .textoverFour{
+                    text-overflow: -o-ellipsis-lastline;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    display: -webkit-box;
+                    -webkit-line-clamp: 4;
+                    line-clamp: 4;
+                    -webkit-box-orient: vertical;
+                }
+            }
+        }
+    }
+    .plan-content-edit-form{
+        background: #f7f8fa;
+        border:1px solid $borderColor;
+        margin-bottom: 15px;
+    }
+}

@@ -1,0 +1,90 @@
+@import '@/assets/globalStyle.scss';
+.compare-box{
+    margin:-16px;
+    .conflict-alert-box{
+        margin-bottom: 20px;
+        .conflict-alert{
+            padding:10px;
+            background: #FFEFD9;
+            i{
+                color:$warningColor;
+                font-size: 16px;
+            }
+            span{
+                color:$warningColor;
+                vertical-align: text-bottom;
+            }
+        }
+    }
+    .conflict-clue-box{
+        padding:0 20px;
+        .error-clue-box{
+            float: left;
+            width:calc(50% - 10px);
+        }
+        .compare-clue-box{
+            float: right;
+            width:calc(50% - 10px);
+        }
+        .clue-block{
+            background: #FAFAFA;
+            padding:16px;
+            .clue-title{
+                text-align: center;
+                font-size: 18px;
+                font-weight: 600;
+                margin-bottom:14px;
+            }
+            .clue-content{
+                .clue-detail-item{
+                    font-size: 14px;
+                    display: flex;
+                    height: 38px;
+                    overflow: hidden;
+                    .clue-item-label{
+                        white-space: nowrap;
+                    }
+                }
+                .error-item{
+                    color:$errorColor;
+                }
+            }
+        }
+        .error-block{
+            background: #FFF1F0;
+            .clue-title{
+                color:$errorColor;
+            }
+        }
+        .content-divider{
+            display: table;
+            white-space: nowrap;
+            text-align: center;
+            background: 0 0;
+            font-weight: 500;
+            color: #17233d;
+            font-size: 16px;
+            margin: 16px 0;
+            &::before,&::after{
+                content: '';
+                display: table-cell;
+                position: relative;
+                top: 50%;
+                width: 50%;
+                border-top: 2px solid $borderColor;
+                -webkit-transform: translateY(50%);
+                transform: translateY(50%);
+            }
+            span{
+                display: inline-block;
+                padding: 0 24px;
+            }
+        }
+    }
+    .page-bottom{
+        text-align:center;
+        padding:20px 0;
+        float: right;
+        width:calc(50% - 10px);
+    }
+}

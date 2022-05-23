@@ -1,0 +1,95 @@
+@import "./../../../assets/globalStyle.scss";
+
+.member-big-box{
+    padding-left:235px;
+    .content-left {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 220px;
+        height: 100%;
+        overflow-y: auto;
+        background: #ffffff;
+    }
+    .content-right{
+        background: #ffffff;
+        min-width: 540px;
+        padding:16px;
+        height: auto;
+        .right-box{
+            padding-bottom:10px;
+            border-bottom:1px solid $borderColor;
+        }
+        .table-border{
+            border:1px solid $borderColor;
+            border-bottom:0;
+            border-top: 0;
+        }
+    }
+    .button-box {
+        text-align: center;
+        padding: 4px 0;
+        border-bottom: 1px solid $borderColor;
+        .member-btn{
+            margin:4px 0;
+            width:80%;
+        }
+        .delete-btn{
+            background: $errorColor;
+            color:#fff;
+        }
+    }
+    .depart-box {
+        width: 80%;
+        margin: auto;
+        padding: 10px 0;
+    }
+    .hidden-tree {
+        height: 200px;
+        overflow: auto;
+        position: absolute;
+        z-index: 15;
+        width: 100%;
+        background: #fff;
+        border: 1px solid $borderColor;
+        padding: 0px 5%;
+    }
+    .drawer-style{
+        padding:16px;
+    }
+    .drawer-add-btn{
+        margin-right: 20px;
+    }
+    .drawer-btn{
+        text-align: center;
+    }
+}
+.modal-btn-item{
+    text-align: center;
+}
+.modal-metion-tips{
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+.drawer-content-header{
+    position: relative;
+    span{
+        display:inline-block;
+        font-size: 16px;
+    }
+    .drawer-content-btn{
+        position: absolute;
+        right:30px;
+        top:50%;
+        transform: translateY(-50%);
+    }
+}
+.transfer-label{
+    float: left;
+    width: 50px;
+    line-height: 37px;
+}
+.transfer-input{
+    margin-bottom: 20px;
+    margin-left: 60px;
+}

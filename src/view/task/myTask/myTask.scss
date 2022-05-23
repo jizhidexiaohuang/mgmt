@@ -1,0 +1,21 @@
+@import './../../../assets/globalStyle.scss';
+.header-detail{
+    padding:15px 25px;
+    p{
+        line-height: 25px;
+    }
+}
+.bottom-distance{
+    margin-bottom: 20px;
+}
+.expiry-date-option{
+    padding:5px 10px;
+    border:1px solid $borderColor;
+    cursor: pointer;
+    &:hover{
+        border-color: $globalMainColor;
+    }
+    &.active{
+        border-color: $globalMainColor;
+    }
+}

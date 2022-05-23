@@ -1,0 +1,26 @@
+@import '@/assets/globalStyle.scss';
+.common-tabs-bar{
+    border-bottom:1px solid $borderColor;
+    // margin:-16px -16px 0 -16px;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    li{
+        padding:0 8px;
+    }
+}
+.manage-content{
+    padding:0px 16px;
+}
+.info-tabs{
+    margin:0 -16px 0 -16px;
+}
+
+.detail-header{
+    .edit-icon{
+        cursor: pointer;
+        float: right;
+        margin-right: 40px;
+        font-size: 16px;
+    }
+}

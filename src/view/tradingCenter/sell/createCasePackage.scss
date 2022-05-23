@@ -1,0 +1,38 @@
+@import '@/assets/globalStyle.scss';
+.total-row{
+    line-height: 30px;
+    padding:10px 0px;
+    font-size: 14px;
+}
+ .money{
+     font-weight: 600;
+     font-size: 14px;
+     color:$warningColor;
+ }
+ .content{
+     padding-left:15px;
+     line-height: 32px;
+ }
+ .checkbox-label{
+     padding-left:5px;
+ }
+.checkbox-text{
+     color:$warningColor;
+     font-weight: 700;
+ }
+ .num-input{
+     display: inline-block;
+     width:120px;
+     vertical-align: middle;
+ }
+ .btn-row{
+     text-align:center;
+     padding-top:20px;
+ }
+ .add-case-btn{
+     float: right;
+ }
+ .total-surcharge{
+     border-top:1px solid $borderColor;
+     margin-top:25px;
+ }

@@ -1,0 +1,131 @@
+@import "../../../assets/globalStyle.scss";
+.my-clue-result{
+    ul.list{
+        border-top: 1px solid #eee;
+        position: relative;
+        >li{
+            border-bottom: 1px solid #eee;
+            border-left: 1px solid #eee;
+            border-right: 1px solid #eee;
+        }
+    }
+    .no-data-tips{
+        line-height: 42px;
+        text-align: center;
+        border-bottom: 1px solid #eee;
+    }
+    .result-title{
+        line-height: 36px;
+        padding:0 10px;
+        background: #F7FAFC;
+        span{
+            font-size: 14px;
+        }
+        .result-time{
+            font-weight: 600;
+            margin-left:15px;
+        }
+        .result-name{
+            font-weight: 600;
+            margin-left:25px;
+            cursor: pointer;
+            position: relative;
+            padding-left:30px;
+            cursor: pointer;
+            .push-icon{
+                background-color: $globalMainColor;
+                color:#fff;
+                width:20px;
+                height: 20px;
+                font-size: 12px;
+                font-weight: normal;
+                position: absolute;
+                line-height: 20px;
+                border-radius: 3px;
+                text-align: center;
+                left: 0;
+                top:50%;
+                transform: translateY(-50%);
+            }
+            .text-icon{
+                background-color: $globalMainColor;
+                color:#fff;
+                width:20px;
+                height: 20px;
+                font-size: 12px;
+                font-weight: normal;
+                position: absolute;
+                line-height: 20px;
+                border-radius: 3px;
+                text-align: center;
+                left: -23px;
+                top:50%;
+                transform: translateY(-50%);
+            }
+            .result-code{
+                color: $globalMainColor;
+            }
+        }
+        .result-title-option{
+            padding-right:15px;
+            float: right;
+            span{
+                font-weight: 400;
+                font-size: 12px;
+                cursor: pointer;
+                padding:10px;
+                &.check-info{
+                    color:$globalMainColor;
+                }
+            }
+        }
+    }
+    .conflict-title{
+        background: #FFF1F0;
+    }
+    .result-main{
+        background: #fff;
+        padding:5px 10px 5px 26px;
+        .result-main-left{
+            float: left;
+            width: calc(100% - 256px);
+            p{
+                span{
+                    display: inline-block;
+                    width:40%;
+                    margin-right: 10px;
+                    margin-bottom:5px;
+                }
+                .badge{
+                    display: inline;
+                    padding:5px 10px;
+                    color:#fff;
+                    border-radius: 5px;
+                    vertical-align: top;
+                }
+                .result-reject{
+                    background: #ed7048;
+                }
+                .result-agree{
+                    background: #2FC56B;
+                }
+                .result-audit{
+                    background: #ffb457;
+                }
+            }
+            .result-text{
+                float: left;
+                width:100%;
+            }
+            .block-shop-text{
+                max-width:calc(100% - 60px);
+                width:auto;
+                padding-right:4px;
+            }
+        }
+        .result-main-right{
+            float: right;
+            max-width:256px;
+        }
+    }
+}

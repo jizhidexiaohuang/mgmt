@@ -1,0 +1,97 @@
+@import "./../../../../assets/globalStyle";
+.plan-form{
+    background: #f7f8fa;
+    border:1px solid $borderColor;
+    margin-bottom: 35px;
+}
+
+.card-list-box{
+    width:100%;
+    padding-top: 10px;
+    .card-block-item{
+        width:calc(50% - 8px);
+        float:left;
+        margin-right:16px;
+        transition: width .2s;
+        &:nth-of-type(2n+2){
+            margin-right:0;
+        }
+    }
+    .card-block-edit-item{
+        width:100%;
+    }
+    .card-list-item{
+        height: 207px;
+        border:1px solid $borderColor;
+        margin-bottom: 38px;
+        width:100%;
+        position: relative;
+        .card-header{
+            background-color: #F7F8FA;
+            border-top:3px solid $globalMainColor;
+            height: 43px;
+            line-height: 43px;
+            font-size: 14px;
+            color:$textColor;
+            padding-left:30px;
+            padding-right:10px;
+            .contract-title{
+                width:70%;
+                float:left;
+            }
+            &::before{
+                content:'';
+                width: 2px;
+                height: 10px;
+                background-color: $globalMainColor;
+                position: absolute;
+                top:18px;
+                left:20px;
+            }
+        }
+        .invalid-state{
+            border-top:3px solid $expireColor;
+        }
+        .card-content{
+            padding:0px 30px 16px;
+            .card-conten-name{
+                font-size: 13px;
+                color:$textColor;
+                margin-top: 3px;
+                margin-bottom: 5px;
+            }
+            .card-content-item{
+                margin-top: 15px;
+                position: relative;
+                span{
+                    float: left;
+                }
+                i{
+                    position: absolute;
+                    top:-3px;
+                    left:0;
+                    font-size: 22px;
+                    color:$globalMainColor;
+                }
+                .spec-item-label{
+                    float: left;
+                    width: 52px;
+                }
+                .spec-item-content{
+                    float: left;
+                    width:calc(100% - 52px);
+                    text-overflow: -o-ellipsis-lastline;
+                    display: -webkit-box;
+                    -webkit-box-orient: vertical;
+                    text-overflow: ellipsis;
+                    overflow: hidden;
+                    -webkit-line-clamp: 3;
+                    line-clamp: 3;
+                }
+            }
+        }
+    }
+    .card-center{
+        text-align: center;
+    }
+}

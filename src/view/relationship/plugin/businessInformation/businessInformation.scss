@@ -1,0 +1,185 @@
+@import "@/assets/globalStyle.scss";
+body,html{
+    background: #ffffff;
+    width:100%;
+    height:100%;
+}
+ul{
+    padding: 0;
+    margin: 0;
+}
+ul li{
+    outline: none;
+    list-style: none;
+    padding:0;
+}
+table,table tr th, table tr td { border:1px solid #E4EEF6; }
+table { text-align: center; border-collapse: collapse;}
+a{ 
+    outline:none;
+    text-decoration:none;
+}
+a{color: #000;}
+.subject-hide{
+    display: none;
+}
+.business-info{
+    margin:-16px;
+    padding:16px;
+    position: relative;
+}
+/* 详情页面头部 */
+.subject-header{
+    .subject-header-name{
+        padding:5px 0;
+    }
+}
+.subject-header .subject-header-name h2{
+    display:inline-block;
+    margin: 0;
+}
+.subject-header .subject-header-name .subject-update-time{
+    float: right;
+    color: #999;
+    font-size: 14px;
+    line-height: 30px;
+}
+.subject-i-block{
+    display: inline-block;
+    box-sizing: border-box;
+    padding:4px 8px 4px 8px;
+    font-style:normal;
+    font-size: 12px;
+    border-radius: 2px;
+}
+.subject-i-xc{
+    background: $successColor;
+    color:#ffffff;
+}
+.subject-i-error{
+    background: $errorColor;
+    color:#ffffff;
+}
+.subject-header .subject-detail{
+    padding:14px 0;
+}
+.subject-header .subject-ul-detail{
+    width:100%;
+    font-size: 14px;
+    color:$textColor;
+}
+.subject-header .subject-ul-detail li{
+    float:left;
+    min-width: 24%;
+    line-height: 2;
+}
+
+/* 详情内容 */
+.subject-content{
+    box-sizing: border-box;
+    width: 100%;
+}
+.subject-content .subject-content-navigation{
+    border-bottom:1px solid $borderColor;
+    min-width:1000px;
+}
+.subject-content .subject-content-navigation li{
+    width:110px;
+    box-sizing: border-box;
+    text-align: center;
+    float:left;
+    padding:8px 0;
+    font-size: 14px;
+    cursor: pointer;
+    color: #3c4144;
+    position: relative;
+}
+.subject-content .subject-content-navigation li .subject-span-red{
+    color:$errorColor;
+}
+.subject-content .subject-content-navigation li .subject-span-grey{
+    color:#cccccc;
+}
+.subject-content .subject-content-navigation .subject-navigation-active{
+    color:$globalMainColor;
+    border-bottom: 2px solid $globalMainColor;
+}
+.subject-content .subject-content-navigation li:hover{
+    color:$globalMainColor;
+}
+/* 详情内容-基本信息 */
+.subject-content-block{
+    box-sizing: border-box;
+    padding:0 0 30px 0;    
+}
+// .subject-content-basic{
+//     padding-top:18px;
+// }
+.subject-content-basic .subject-content-label{
+    font-size: 14px;
+    box-sizing: border-box;
+}
+.subject-content-basic .subject-content-label a{
+    padding: 5px 10px;
+    border: 1px solid $borderColor;
+    border-radius: 3px;
+    margin-right: 10px;
+    display: inline-block;
+}
+.subject-content-basic .subject-content-label .subject-label-disable{
+    background: #F2F2F2;
+}
+.basic-title{
+   font-size: 18px;
+   margin:18px 0;
+}
+.subject-content-basic .basic-title a{
+    color:$infoColor;
+    font-size: 14px;
+    font-weight: normal;
+    margin-left: 5px;
+}
+/* 表格样式 */
+.subject-table {
+    width:95%;
+    max-width: 1300px;
+}
+.subject-noheader-table td{
+    padding:10px 15px;
+    text-align: left;
+    font-size: 14px;
+}
+.subject-noheader-table .subject-table-color{
+    width:200px;
+}
+.subject-table .subject-table-color{
+    background: #F2F9FC;
+}
+.subject-header-table th,.subject-header-table td{
+    padding:10px 15px;
+    font-size: 14px;
+}
+.subject-header-table .subject-index{
+    width:60px;
+}
+.subject-layer{
+    color:$infoColor;
+    cursor: pointer;
+}
+
+.demo-spin-icon-load{
+    animation: ani-demo-spin 1s linear infinite;
+}
+@keyframes ani-demo-spin {
+    from { transform: rotate(0deg);}
+    50%  { transform: rotate(180deg);}
+    to   { transform: rotate(360deg);}
+}
+.demo-spin-col{
+    height: 100%;
+    position: absolute;
+    top:0;
+    left: 0;
+    right: 0;
+    width: 100%;
+}

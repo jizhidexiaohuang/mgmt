@@ -1,0 +1,93 @@
+.annotation-content{
+    background: #fff;
+    width: 100%;
+    .info-top{
+        padding-left:28px;
+        .info-title{
+            font-size: 14px;
+            font-weight: 900;
+            color: #4988eb;
+            margin: 10px 0;
+        }
+        .info-base-message{
+            padding-left:20px;
+            p{
+                float: left;
+                width: 50%;
+                height: auto;
+                line-height: 20px;
+                padding-right: 10px;
+                padding-bottom: 10px;
+            }
+            .spec{
+                width: 100%;
+            }
+            .enclosure{
+                float: left;
+                width: 100%;
+                height: auto;
+                overflow: hidden;
+                span{
+                    float: left;
+                }
+                .fileList{
+                    width: 80px;
+                    float: left;
+                    height: auto;
+                    margin-right:20px;
+                    a{
+                        display: inline-block;
+                        width: 80px;
+                        height: 80px;
+                        img{
+                            width: 80px;
+                            height: 80px;
+                            border: solid 1px #ececec;
+                            vertical-align: top;
+                        }
+                    }
+                    .fileName{
+                        line-height: 18px;
+                        width: 100%;
+                        margin-top:5px;
+                        word-wrap:break-word;
+                        word-break:break-all;
+                        overflow: hidden;
+                    }
+                }
+            }
+            .info-message-title{
+                font-weight: bold;
+                color: #6a6c6f;
+                padding:10px 0px;
+            }
+        }
+    }
+    .info-tab{
+        margin-top:20px;
+        border-bottom:1px solid #d8d8d8;
+        li{
+            width: 124px;
+            text-align: center;
+            height: 37px;
+            float: left;
+            line-height: 34px;
+            border-top:3px solid transparent;
+            &:first-child{
+                border-left:transparent!important;
+                padding-left:16px;
+            }
+            &.active{
+                border-left:1px solid #d8d8d8;
+                border-right:1px solid #d8d8d8;
+                border-top:3px solid #4988eb;
+            }
+        }
+    }
+}
+
+.no-tips{
+    padding:10px 10px 10px 30px;
+    font-size: 14px;
+    font-weight: 500;
+}

@@ -1,0 +1,79 @@
+@import '@/assets/globalStyle.scss';
+.tree-input {
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+    border: 1px solid $borderColor;
+    transition: all .3s;
+    border-radius: 4px;
+    padding: 0px 7px;
+    position: relative;
+    line-height: 32px;
+    cursor: pointer;
+    .input-drow-icon{
+        position: absolute;
+        transition: transform .3s;
+        right: 10px;
+        top: 50%;
+        cursor: pointer;
+    }
+    .input-drow {
+        transform: translateY(-50%) rotate(0);
+    }
+    .input-up{
+        transform: translateY(-50%) rotate(180deg);
+    }
+    .tag{
+        height: 24px;
+        line-height: 22px;
+        margin: 3px 4px 3px 0;
+        position: relative;
+        display: inline-block;
+        padding: 0 2px 0px 8px;
+        border: 1px solid $borderColor;
+        border-radius: 3px;
+        background: #f7f7f7;
+        font-size: 12px;
+        vertical-align: middle;
+        opacity: 1;
+        overflow: hidden;
+        cursor: pointer;
+    }
+  }
+  
+  .hidden-tree {
+    -moz-user-select: none;
+    user-select: none;
+    -webkit-user-select: none;
+    height: 200px;
+    margin: 5px 0;
+    overflow: auto;
+    position: absolute;
+    z-index: 10;
+    width: 100%;
+    background: #fff;
+    border: 1px solid $borderColor;
+    border-radius: 4px;
+    padding: 0px 5%;
+    will-change: top, left;
+    transform-origin: center top;
+    transform: scaleY(1);
+    li{
+        line-height: 18px;
+    }
+  }
+
+  .input-select-fade-enter-active, .input-select-fade-leave-active {
+    transition: all .3s;
+  }
+
+  .input-select-fade-enter, .input-select-fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+    opacity: 0;
+    transform: scaleY(0.8);
+  }
+
+  .select-drop-active {
+    border-color: $globalMainColor;
+    outline: 0;
+    box-shadow: 0 0 0 2px rgba(45,140,240,.2);
+  }

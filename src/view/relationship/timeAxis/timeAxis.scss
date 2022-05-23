@@ -1,0 +1,49 @@
+.list{
+    padding-top:20px;
+    li{
+        position: relative;
+        min-height: 62px;
+        width: 100%;
+        padding-left:150px;
+        overflow: hidden;
+        >span{
+            position: absolute;
+            left: 24px;
+        }
+        span{
+            &.active{
+                color:#4988eb;
+            }
+        }
+        i{
+            position: absolute;
+            left: 125px;
+            width: 17px;
+            height: 17px;
+            &:after{
+                
+            }
+        }
+        .annotation-content-right{
+            width: 100%;
+            padding:0 20px 20px 0;
+            .p-name{
+                color: #6a6c6f;
+                font-weight: bold;
+                padding-bottom:10px;
+                .verb{
+                    padding:0px 5px;
+                }
+            }
+        }
+        &:after{
+            content: '';
+            position: absolute;
+            top: 15px;
+            left: 133px;
+            width: 1px;
+            height: 100%;
+            background: #d8d8d8;    
+        }
+    }
+}

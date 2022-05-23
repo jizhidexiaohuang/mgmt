@@ -1,0 +1,131 @@
+@import "./../../assets/globalStyle.scss";
+//表格 块模式展示
+.detail-form-block{
+    padding:20px 18px;
+    .detail-form-item{
+        border:1px solid $borderColor;
+        border-top:3px solid #D5D9DD;
+        margin-bottom: 18px;
+        .block-header{
+            padding: 8px 20px;
+            font-size: 12px;
+            background: #f7f8fa;
+            color:$textColor;
+        }
+        .block-content{
+            padding:10px 10px 0 10px;
+            .block-content-title{
+                display: flex;
+                padding:0px 10px;
+                margin-bottom:5px;
+                .add-icon{
+                    font-size: 16px;
+                    color:$globalMainColor;
+                    cursor: pointer;
+                }
+                >div:nth-child(1){
+                    width:calc(100% - 22px);
+                    margin-left:6px;
+                    >div{
+                        float:left;
+                        padding:0 7px;
+                    }
+                    .title-begin{ width: 40%; }
+                    .title-end{ width:35%; }
+                    .title-select{ width:60%; }
+                    .title-select-fee{ width:40% }
+                    .title-proportion{ width:25%; }
+                }
+            }
+            .fee-loop-list{
+                display: flex;
+                background: #f7f8fa;
+                padding:8px 10px;
+                margin-bottom: 12px;
+                .require-tips{
+                    font-size: 12px;
+                    color:$errorColor;
+                    line-height: 33px;
+                    font-family: SimSun;
+                }
+                .fee-loop-content{
+                    width:calc(100% - 22px);
+                    >div{
+                        float:left;
+                        padding:0 7px;
+                    }
+                    .fee-loop-begin,.fee-loop-end{ width:35%;min-width: 150px; }
+                    .fee-loop-begin-lg{width:75%}
+                    .fee-loop-select{ width:60%; }
+                    .fee-loop-select-prencent{ 
+                        float:left;
+                        width:calc(40% - 7px);
+                        margin-right: 14px;
+                        &:last-child{
+                            margin-right: 0;
+                        }
+                    }
+                    .fee-loop-select-amount{ 
+                        float:left;
+                        width:calc(60% - 7px);
+                    }
+                    .fee-loop-split{ width:5%;text-align: center;min-width: 24px;}
+                    .fee-loop-proportion{ width:25%;}
+                }
+                .remove-icon{
+                    font-size: 16px;
+                    color:$errorColor;
+                    line-height: 33px;
+                    cursor: pointer;
+                }
+            }
+            .fee-full-list{
+                padding:8px 10px;
+                width:100%;
+                background: #f7f8fa;
+            }
+            .fee-label-list{
+                margin-bottom: 12px;
+            }
+            .block-content-radio{
+                border:1px solid $borderColor;
+                line-height: 30px;
+                padding-left: 17px;
+                margin-bottom:0px;
+            }
+            .block-content-grey{
+                background: #f7f8fa;
+                padding:10px;
+                margin-bottom:10px;
+            }
+            .checkbox-label{
+                display: inline-block;
+                text-align: right;
+                box-sizing: border-box;
+                padding-right:10px;
+                width:60%;
+            }
+            .checkbox-text{
+                display: inline-block;
+                width:30%;
+            }
+        }
+        .block-info-content{
+            .block-content-title{
+                >div:nth-child(1){
+                    .title-select{ width:75%; }
+                    .title-select-fee{ width:25% }
+                }
+            }
+            .fee-loop-list{
+                background:#fff;
+                margin-left: 10px;
+                .fee-loop-content{
+                    .fee-loop-begin{width:40%;}
+                    .fee-loop-select{ width:75%;}
+                    .fee-loop-select-prencent{ width:25%; }
+                }
+            }
+        }
+    }
+}

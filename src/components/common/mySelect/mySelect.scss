@@ -1,0 +1,128 @@
+@import '@/assets/globalStyle.scss';
+.selected{
+    width:300px;
+    background: #fff;
+    position: relative;
+    .select-container{
+        position: relative;
+        min-height: 32px;
+        line-height: 1;
+        padding: 0 30px 0 4px;
+        border:1px solid $borderColor;
+        border-radius: 2px;
+        cursor: pointer;
+        &:hover{
+            border-color:$globalMainColor;
+        }
+        .select-tag{
+            position: relative;
+            height: 22px;
+            line-height: 22px;
+            // max-width: 99%;
+            display: inline-block;
+            margin: 4px 4px 2px 0;
+            padding: 0 8px;
+            border: 1px solid $borderColor;
+            border-radius: 3px;
+            background: #f7f7f7;
+            font-size: 12px;
+            vertical-align: middle;
+            opacity: 1;
+            overflow: hidden;
+            .tag-text{
+                display: block;
+                margin-right: 14px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+            }
+            .ios-close{
+                position: absolute;
+                display: block;
+                right: 4px;
+                top: 3px;
+            }
+        }
+        .selected-text{
+            line-height: 30px;
+            padding-left:3px;
+        }
+        .arrow-down{
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            right: 8px;
+            line-height: 1;
+            transition: all .2s ease-in-out;      
+        }
+        .arrow-down-visible{
+            transform: translateY(-50%) rotate(180deg);
+        }
+        .clear-selected{
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            right: 8px;
+            line-height: 1;
+            color:#808695;
+        }
+        .select-placeholder{
+            line-height: 30px;
+            padding-left:3px;
+            color:#9E9E9E;
+        }
+    }
+    .select-search{
+        position: absolute;
+        bottom: -32px;
+        z-index: 2;
+        width:100%;
+        height: 30px;
+        box-sizing: border-box;
+        // padding-left:5px;
+        // border:1px solid $globalMainColor;
+    }
+    .select-list{
+        position: absolute;
+        // bottom: -235px;
+        width:100%;
+        background: #fff;
+        will-change: top, left;
+        transform-origin: center top;
+        box-shadow: 0 4px 6px rgba(0,0,0,.2);
+        transform: all 0.2s ease-in-out;
+        z-index: 999;
+        .list-item{
+            padding:7px 16px;
+            cursor: pointer;
+            position: relative;
+            &:hover{
+                background: #f3f3f3;
+                color:$globalMainColor;
+            }
+            &.list-item-active{
+                background: #f3f3f3;
+                color:$globalMainColor;
+            }
+            &.list-item-disabled{
+                cursor:not-allowed;
+                color: $disabledColor;
+            }
+            &.list-item-active .checked-icon{
+                display: block;
+            }
+            .checked-icon{
+                position: absolute;
+                top:50%;
+                transform: translateY(-50%);
+                right:20px;
+                line-height: 1;
+                color:$globalMainColor;
+                display: none;
+            }
+        }
+    }
+    .no-data{
+        height: 52px;
+    }
+}

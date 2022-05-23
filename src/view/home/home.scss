@@ -1,0 +1,272 @@
+@import '@/assets/globalStyle.scss';
+.home-box{
+    display: flex;
+    margin-top: -32px;
+    z-index: 100;
+    background: #F4F5F9;
+    .bg-white{
+        background: #fff;
+    }
+    .unit-margin{
+        margin-bottom: 10px;
+    }
+    .echarts-box{
+        width:100%;
+        height:450px;       
+    }
+    .home-left{
+        flex:1;
+        float: left;
+        height: 100%;
+        .flex-content{
+            display: grid;
+            grid-template-columns: repeat(4,calc(25% - 7.5px));
+            grid-gap: 10px;
+            .item-top,.item-bottom{
+                padding:10px;
+            }
+            .item-bottom{
+                border-top:1px solid $borderColor;
+            }
+            .flex-item{
+                background: #fff;
+                position: relative;
+                border:1px solid $borderColor;
+                .secondary-title{
+                    margin-bottom: 10px;
+                }
+                .item-left,.item-right{
+                    float:left;
+                    width:50%;
+                    text-align: center;
+                }
+                .item-right{
+                    float:right;
+                }
+                .item-content{
+                    color:#000;
+                }
+            }
+            .disabled-block{
+                .item-content{
+                    color:#909090;
+                }
+                .item-compare{
+                    span{
+                        color:#909090;
+                    }
+                }
+            }
+        }
+        .top-border{
+            border-top:3px solid $globalMainColor;
+            width: 100%;
+            padding:15px 10px;
+        }
+        .left-block{
+            display: grid;
+            grid-template-columns: repeat(5,calc(20% - 8px));
+            grid-gap: 10px;
+            .left-block-item{
+                padding:15px;
+                border:1px solid $borderColor;
+                position: relative;
+                cursor: pointer;
+                img{
+                    width: 45px;
+                    height: 45px;
+                    display: inline-block;
+                    position: absolute;
+                    left:25px;
+                    top:50%;
+                    transform: translateY(-50%);
+                }
+                .item-text-box{
+                    display: inline-block;
+                    padding-left:70px;
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+    .home-right{
+        min-width: 380px;
+        width:calc(25% - 10px);
+        height: 100%;
+        overflow-y: auto;
+        float: left;
+        margin-left:10px;
+        padding-top:40px;
+        >div{
+            .title-option{
+                float: right;
+            }
+            .main-title{
+                background: #E9EFFF;
+                padding:8px 12px;
+            }
+            .inside-list{
+                padding:20px;
+                .main-title{
+                    padding:5px 10px;
+                    background: #F4F4F4;
+                    font-size: 14px;
+                }
+            }
+            .block-content{
+                background: #fff;
+                margin-bottom: 10px;
+                padding:10px 20px;
+                ul{
+                    li{
+                        position: relative;
+                        border-bottom:1px solid $borderColor;
+                        padding:5px 0;
+                        margin-bottom: 5px;
+                        .icon-absolute{
+                            position: absolute;
+                            top: 50%;
+                            left: 0px;
+                            transform: translateY(-50%);
+                            background: $globalMainColor;
+                        }
+                        .icon-dot{
+                            width:8px;
+                            height: 8px;
+                            border-radius: 50%;
+                        }
+                        .icon-radius{
+                            width:20px;
+                            height:20px;
+                            border-radius: 50%;
+                            line-height: 20px;
+                            text-align: center;
+                            color:#fff;
+                        }
+                        .icon-img{
+                            width: 20px;
+                            height: 30px;
+                            line-height: 30px;
+                            background-size: 90%;
+                            background-repeat: no-repeat;
+                            background-position: center;
+                            border-radius: 0;
+                            background-color: transparent;
+                        }
+                        .icon-gold{
+                            background-image: url(./../../assets/images/shield-gold.png);
+                        }
+                        .icon-sliver{
+                            background-image: url(./../../assets/images/shield-sliver.png);
+                        }
+                        .icon-copper{
+                            background-image: url(./../../assets/images/shield-copper.png);
+                        }
+                        .block-item-text{
+                            display: inline-block;
+                            padding-left:15px;
+                            width:calc(100% - 95px);
+                        }
+                        .click-text{
+                            cursor: pointer;
+                        }
+                        .time-text{
+                            color:$labelColor;
+                        }
+                        .pay-text{
+                            color:$globalMainColor;
+                        }
+                        .rank-text{
+                            font-size: 14px;
+                            font-weight: 600;
+                        }
+                        &:last-child{
+                            border:none;
+                            margin-bottom: 0;
+                        }
+                    }
+                    .has-read{
+                        .icon-dot{
+                            background: #C4C4C4;
+                        }  
+                        .click-text{
+                            color:#C4C4C4;
+                        }
+                    }
+                    .li-img{
+                        .block-item-text{
+                            padding-left:25px;
+                        }
+                        .icon-absolute{
+                            top:15px;
+                        }
+                    }
+                }
+            }
+            .scroll-list{
+                padding:0;
+                ul{
+                    padding:0 20px 10px 20px;
+                }
+            }
+            .no-advise{
+                padding:10px;
+                text-align: center;
+                font-size: 14px;
+                font-weight: 600;
+            }
+        }
+    }
+    .main-title{
+        font-size: 16px;
+        line-height: 30px;
+        padding:5px 0px;
+        >span{
+            font-weight: 600;
+            color: #4b4b4b;
+        }
+        i{
+            vertical-align: middle;
+        }
+    }
+    .secondary-title{
+        font-size: 14px;
+        font-weight: 500;
+        color: $labelColor;
+    }
+    strong{ font-size: 18px }
+}
+
+@media (max-width: 1555px) {
+    .home-box{
+        .home-left{
+            .flex-content{
+                grid-template-columns: repeat(3,calc(33.33% - 6.66px));
+            }
+            .left-block{
+                grid-template-columns: repeat(4,calc(25% - 7.5px));
+            }
+        }
+    }
+}
+
+@media (max-width: 1285px) {
+    .home-box{
+        .home-left{
+            .left-block{
+                grid-template-columns: repeat(3,calc(33.33% - 6.66px));
+            }
+        }
+    }
+}
+
+@media (max-width: 1277px) {
+    .home-box{
+        .home-left{
+            .flex-content{
+                display: grid;
+                grid-template-columns: repeat(2,calc(50% - 5px));
+            }
+        }
+    }
+}

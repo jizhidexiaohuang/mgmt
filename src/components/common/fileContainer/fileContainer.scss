@@ -1,0 +1,159 @@
+@import '@/assets/globalStyle.scss';
+.file-container{
+    display: flex;
+    float: left;
+    width:100%;
+}
+.style-one{
+    flex:1;
+    .enclosure{
+        width:80px;
+        margin:0 20px 12px 0px;
+        height: 120px;
+        float: left;
+        img{
+            width:100%;
+            border:1px solid $borderColor;
+            cursor: pointer;
+        }
+        .fileContain-span{
+            display: inline-block;
+            border:1px solid $borderColor;
+            width:80px;
+            height:80px;
+        }
+        .background-pdf{
+            background: url("./../../../assets/images/pdf.png");
+        }
+        .background-document{
+            background: url("./../../../assets/images/document.png");
+        }
+        .background-xls{
+            background: url("./../../../assets/images/excel.png");
+        }
+        .background-word{
+            background: url("./../../../assets/images/word.png");
+        }
+        .background-txt{
+            background: url("./../../../assets/images/txt.png");
+        }
+        .background-html{
+            background: url("./../../../assets/images/html.png");
+        }
+    } 
+}
+.style-two{
+    .case-material{
+        width:200px;
+        float: left;
+        line-height: 30px;
+        margin-bottom:20px;
+        a{
+            color: #6a6c6f;
+            &:hover{
+                color:$globalMainColor;
+            }
+        }
+        .case-material-icon{
+            display: inline-block;
+            vertical-align: middle;
+            width: 30px;
+            height: 30px;
+            background: url('../../../assets/images/sprites-icon.png') no-repeat -720px -40px;
+        }
+        .icon-doc{
+            background-position-y: -4px;
+        }
+        .icon-pdf{
+            background-position: -688px -4px;
+        }
+        .icon-excel{
+            background-position-x:-688px;
+        }
+    }
+}
+.style-three,.style-four{
+    .litigation-doc-wrap{
+        margin:10px 0 0 10px;
+        .l-doc{
+            position: relative;
+            width: 200px;
+            min-height: 60px;
+            border: 1px solid $borderColor;
+            margin-right: 20px;
+            margin-bottom: 12px;
+            float: left;
+            .icon-close{
+                position: absolute;
+                right: 0;
+                top:0;
+                width:30px;
+                height: 30px;
+                cursor: pointer;
+                background: url('../../../assets/images/sprites-icon.png') no-repeat -654px -42px;
+            }
+            i.sprite-icon{
+                position: relative;
+                float: left;
+                margin: 14px 15px;
+                width: 30px;
+                height: 30px;
+                &.folder{
+                    margin: 10px 15px;
+                    width: 32px;
+                    height: 29px;
+                    background-position: -558px -42px;
+                }
+                &.power{
+                    margin: 12px 15px;
+                    width:47px;
+                    height: 25px;
+                    background-position:-505px -46px;
+                }
+            }
+            p{
+                color: #6a6c6f;
+                font-weight: 700;
+                &>.material-count{
+                    display: inline-block;
+                    width: 60px;
+                    border-bottom: 1px solid $textColor;
+                    text-align: center;
+                    margin: 0 2px;
+                    input{
+                        border: 0;
+                        outline: none;
+                        width: 30px;
+                        text-align: center;
+                        color: $globalMainColor;
+                        background: #fff;
+                    }
+                }
+            }
+            .l-doc-name{
+                margin-top: 14px;
+                padding-right: 12px;
+            }
+        }
+        .c-main,.c-other{
+            // height: 80px;
+            &>h5{
+                height: 26px;
+                font-weight: 600;
+                padding-left: 14px;
+                line-height: 26px;
+                font-size: 12px;
+                background: #f7f7f7;
+            }
+            p.c-other-name{
+                margin-top:10px;
+            }
+            .c-main-name{
+                font-weight: normal;
+            }
+        }
+    }
+}
+.style-four{
+    
+}

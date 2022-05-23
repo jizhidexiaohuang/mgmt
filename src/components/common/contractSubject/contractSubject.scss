@@ -1,0 +1,26 @@
+.contract-subject-block{
+    .prev-slot{
+        float:left;
+        width:72px;
+        background-color: #F8F8F9;
+        .ivu-select-selection{
+            border-right: 0;
+            background-color: #F8F8F9;
+            border: 1px solid #ebeaf0!important;
+        }
+        .ivu-select-selection:hover, .ivu-select-selection-focused{
+            border-color:#ebeaf0;
+        }
+        .ivu-select-visible .ivu-select-selection{
+            box-shadow: none;
+        }
+        .ivu-select-arrow{
+            color: #808695!important;
+        }
+    }
+    .append-slot{
+        float: left;
+        width: calc(100% - 80px);
+    }
+}
+

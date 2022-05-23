@@ -1,0 +1,47 @@
+@import "@/assets/globalStyle.scss";
+.carry-out{
+    padding-right: 10px;
+    .carry-out-list{
+        padding-top:10px;
+        border-top:1px solid $borderColor;
+        .carry-out-item{
+            border:1px solid $borderColor;
+            .item-header{
+                padding:10px 25px;
+                font-size: 14px;
+                font-weight: 600;
+                background-color: #F7FAFC;
+                >span{
+                    margin-right: 25px;
+                    vertical-align: middle;
+                }
+                .btn-box{
+                    float: right;
+                    >span{
+                        cursor: pointer;
+                        color:$globalMainColor;
+                    }
+                }
+            }
+            .item-content{
+                padding:10px 25px 0 25px;
+                .item-row{
+                    margin-bottom: 10px;
+                    span{
+                        display: inline-block;
+                    }
+                    .item-label{
+                        width:90px;
+                        vertical-align: top;
+                    }
+                    .item-text{
+                        width:calc( 100% - 95px );
+                    }
+                    .fee-text{
+                        color:$warningColor;
+                    }
+                }
+            }
+        }
+    }
+}

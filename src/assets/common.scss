@@ -1,0 +1,640 @@
+@import "./globalStyle";
+
+html,body{
+    min-width: 1024px;
+    box-sizing: border-box;
+}
+.fl{
+    float: left; 
+}
+.fr{
+    float: right;
+}
+ul li{
+    outline: none;
+    list-style: none;
+    padding:0;
+}
+a{color:$globalMainColor}
+.clear:after{content:'';display:block;clear:both;height:0;overflow:hidden;visibility:hidden;}
+.clear{zoom:1;}
+.clearfix:after{
+    content:".";/*加一段内容*/
+    display:block;/*让生成的元素以块级元素显示，占满剩余空间*/
+    height:0;/*避免生成的内容破坏原有布局高度*/
+    clear:both;/*清除浮动*/
+    visibility:hidden;/*让生成的内容不可见*/
+   }
+.clearfix{zoom:1;/*为IE6，7的兼容性设置*/}
+::-webkit-scrollbar-thumb {
+    border-radius: 2px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.2);
+    background-color: #d9d9d9;
+}
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+    background-color: #F5F5F5;
+}
+.global-main-color{
+    color:$globalMainColor;
+}
+.success-color{
+    color:$successColor;
+}
+.error-color{
+    color:$errorColor;
+}
+.warning-color{
+    color:$warningColor;
+}
+.info-color{
+    color:$infoColor;
+}
+.text-color{
+    color:$textColor;
+}
+/******重置iview的样式Begin******/
+.ivu-modal-header{
+    border-top:4px solid $globalMainColor;
+    text-align: center;
+}
+.ivu-modal-mask{
+    background: rgba(0,0,0,0.15);
+}
+.ivu-drawer-header{
+    background: #f6fafd;
+}
+.ivu-table-header thead tr th{
+    height: 48px;
+    font-size: 14px;
+}
+.ivu-table th, .ivu-table td{
+    height: 42px;
+    max-height: 42px;
+}
+.ivu-table-cell{
+    padding-left: 10px;
+    padding-right: 0px;
+}
+.ivu-table-cell-tree{
+    font-size: 14px;
+}
+.ivu-form-item{
+    margin-bottom:12px;
+}
+.ivu-form-item-error{
+    margin-bottom:24px;
+}
+.ivu-btn-default:hover{
+    color: $textColor;
+    background-color: $borderColor;
+    border-color: $borderColor;
+}
+.ivu-tag{
+    line-height: 20px;
+}
+.tag-style.ivu-tag-border.ivu-tag-closable:after{
+    display: none;
+}
+.tag-style.ivu-tag-border.ivu-tag-closable .ivu-icon-ios-close{
+    margin-left: 0px !important;
+}
+label.ivu-form-item-label{
+    color:$labelColor!important;
+}
+.left-label{
+    color:$labelColor;
+}
+.right-label{
+    color:$labelColor;
+    text-align: right;
+}
+.right-content{
+    min-height: 30px;
+}
+li.ivu-page-item.ivu-page-item-active{
+    background: $globalMainColor;
+}
+.ivu-page-item-active a, .ivu-page-item-active:hover a{
+    color: #fff;
+}
+.badge-style{
+    font-size: 12px;
+    padding: 0px 2px;
+    height: 17px;
+    line-height: 15px;
+    box-shadow: none;
+    min-width: 17px;
+}
+.ivu-table-wrapper{
+    overflow: visible;
+}
+.ivu-rate-star-chart.ivu-rate-star-full .ivu-rate-star-first, .ivu-rate-star-chart.ivu-rate-star-full .ivu-rate-star-second{
+    color: $globalMainColor!important;
+}
+td.ivu-table-expanded-cell{
+    padding:15px 30px;
+}
+.ivu-tabs-bar{
+    margin-bottom:0;
+}
+/******重置iview的样式End******/
+
+/********通用样式Begin*******/
+.card-style{
+    background:#fff;
+    padding:16px;
+    border:1px solid $borderColor;
+    border-radius: 4px;
+    border-top-left-radius:0;
+}
+.confirm-text{
+    text-align: center;
+    padding:10px 0px;
+}
+.ivu-drawer-header{
+    .drawer-title{
+        font-weight: bold;
+        line-height: 22px;
+        padding-left:12px;
+    }
+    .edit-icon{
+        // color:$globalMainColor;
+        cursor: pointer;
+        float: right;
+        margin-right:40px;
+        font-size: 16px;
+    }
+}
+.modal-tips{
+	font-size: 14px;
+    color: #707070;
+    margin-bottom:16px;
+    // text-align: center;
+}
+//抽屉通用title
+.ivu-drawer{
+    height:calc(100% - 50px);
+    top:50px;
+}
+.detail-header{
+    background: #fafafa;
+    padding:5px 15px 5px 30px;
+    min-height: 40px;
+    position: relative;
+    &::before{
+        content: '';
+        display: block;
+        position: absolute;
+        width:2px;
+        height: 30%;
+        background: $globalMainColor;
+        left:18px;
+        top:50%;
+        transform: translateY(-50%);
+    }
+    >span{
+        font-size: 14px;
+        line-height: 30px;
+    }
+    .click-a{
+        float:right;
+        line-height: 30px;
+    }
+}
+.detail-form{
+    padding:20px 20px 0 0;
+}
+.detail-content{
+    .cust-info-tag{
+        margin-top:0;
+        margin-bottom:0;
+        height:18px;
+        line-height:18px;
+        vertical-align: text-bottom;
+    }
+}
+//含有drawer的组件最外层的公共样式
+.have-drawer-style{
+    position: relative;
+    height: 100%;
+}
+.textover{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.table-sub-style{
+    display:inline-block;
+    width:calc(100% - 40px);
+    vertical-align:bottom;
+}
+.padding-left-28{
+    width:calc(100% - 28px);
+}
+.has-sub-project{
+    padding-left:20px;
+    box-sizing: content-box;
+}
+.textoverTwo{
+    text-overflow: -o-ellipsis-lastline;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+}
+/* 全局精灵图 */ 
+.sprite-icon{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: url('../assets/images/sprites-icon.png') no-repeat center;
+}
+.document{
+    background-position: -720px -5px;
+}
+.word-pdf{
+    background-position: -690px -5px;
+}
+.msexcel{
+    background-position: -690px -41px;
+}
+.other{
+    background-position: -720px -41px;
+}
+.modal-botton{
+    width:100px;
+}
+/********通用样式End*******/
+.no-data{
+    text-align: center;
+    padding:10px 0px;
+}
+.tab-badge{
+    margin-left: 8px;
+}
+.ivu-rate{
+    font-size: 16px;
+}
+//通用自制删除框按钮样式
+.do-sn-p{
+    margin:40px 0;
+    font-size: 16px;
+    font-weight: 600;
+    color: #333333;
+    text-align: center;
+}
+
+.do-sn-div{
+    text-align:center;
+    padding:20px 0;
+    .do-div-btn{
+        margin-right:10px;
+        width:100px;
+    }
+}
+
+//分页page外层Row统一样式
+.page-box{
+    text-align: right;
+    background: #fff;
+    padding: 10px 20px;
+}
+
+//页面右侧不折叠搜索样式
+.header-common-right-box{
+    background: #ffffff;
+    padding-bottom:10px;
+    .filter-col{
+        float: right;
+        margin-left: 10px;
+    }
+    //下拉搜索框
+    .search-box{
+        width:280px;
+        .search-more-icon{
+            float: right;
+            width:30px;
+            height: 30px;
+            line-height: 28px;
+            text-align: center;
+            border:1px solid #ebeaf0;
+            box-sizing: border-box;
+            border-left:none;
+            background-color: #f7f7f7;
+            cursor: pointer;
+            &.active{
+                color:$globalMainColor;
+            }
+        }
+        .container{
+            position: absolute;
+            z-index: 10;
+            background-color: #fff;
+            width:280px;
+            padding:20px 10px 10px;
+            box-shadow: 0px 2px 13px 0px 
+                rgba(177, 177, 177, 0.34);
+            border-radius: 2px;
+        }
+        .container-lg{
+            width: 600px;
+            left: -320px;
+        }
+    }
+    .header-common-col{
+        text-align: center;
+        line-height: 32px;
+    }
+    .conditions-option{
+        padding:5px 10px;
+        border:1px solid $borderColor;
+        cursor: pointer;
+        &:hover{
+            border-color: $globalMainColor;
+        }
+        &.active{
+            border-color: $globalMainColor;
+        }
+    }
+}
+
+//搜索表头通用样式
+.header-common-box{
+    background: #fff;
+    position: relative;
+    .search{
+        float: right;
+        position: absolute;
+        top:10px;
+        right:20px;
+        padding-right:30px;
+        background: #f7f7f7;
+        .icon-through{
+            position: absolute;
+            width:31px;
+            height: 32px;
+            right:0px;
+            top:0px;
+            line-height: 30px;
+            text-align: center;
+            border:1px solid #d2d6de;
+            cursor: pointer;
+        }
+    }
+    .selected{
+        padding:10px 30px 10px 30px;
+        position: relative;
+        height: 55px;
+        .single-input{
+            float: left;
+            margin-right:10px;
+        }
+        .selected-name{
+            float: left;
+            padding-top:8px;
+            font-size: 14px;
+            font-weight: 700;
+            margin-right:10px;
+        }
+    }
+    .header-form{
+        width:100%;
+        box-shadow: 0px -1px 1px #d2d6de;
+    }
+    .batch-options{
+        border-top:1px solid #eee;
+        padding:10px 0px 10px 30px;
+    }
+}
+
+//表头自定义筛选按钮
+.check-box-self{
+    display: inline-block;
+    border: 1px solid #d2d6de;
+    padding-right: 13px;
+    padding-left: 13px;
+    box-sizing: border-box;
+    height: 25px;
+    line-height: 25px;
+    vertical-align: middle;
+    cursor: pointer;
+    &:hover{
+        border-color:$globalMainColor;
+    }
+}
+
+//详情页tab框切换按钮
+.tabs-bar{
+    border-bottom:1px solid #F4F4F4;
+    li{
+        position: relative;
+        height: 48px;
+        line-height: 43px;
+        font-size:14px;
+        float:left;
+        text-align: center;
+        box-sizing: border-box;
+        border-top: 3px solid transparent;
+        cursor: pointer;
+        &:hover{
+            color:#999999;
+        }
+        &::before{
+            display: none;
+            position:absolute;
+            content:'';
+            height: 2px;
+            width:100%;
+            background: $globalMainColor;
+            bottom: -1px;
+            left: 0;
+        }
+        &.active::before{
+            display: block;
+            color:$globalMainColor;
+        }
+        &.active{
+            color:$globalMainColor;
+        }
+    }
+    .equalWidth{
+        width: 50%;
+    }
+    .flexWidth{
+        padding:0 20px;
+        display: flex;
+    }
+    
+}
+
+//市场中心样式
+.detail-content{
+    margin-top: 10px;
+    .left-label{
+        text-align: right;
+        margin:0px 10px 10px 0px;
+    }
+    .right-content{
+        margin-bottom: 10px;
+        min-height: 18px;
+    }
+    .right-btn-box{
+        span{
+            color:$globalMainColor;
+            cursor: pointer;
+            &:first-child{
+                margin-right: 5px;
+            }
+        }
+    }
+}
+.detail-btn-box{
+    text-align: center;
+    padding-bottom:20px;
+}
+
+//表格内字体图标通用间隔
+.table-btn{
+    margin-right:8px;
+    cursor: pointer;
+}
+
+//左侧菜单按钮
+.menu-xs-btn{
+    text-align: center;
+    padding:10px 0;
+}
+
+//左侧菜单按钮
+.menu-btn{
+    text-align: center;
+    padding:10px 0;
+}
+
+//左侧菜单按钮
+.demo-drawer-footer{
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border-top: 1px solid #e8e8e8;
+    padding: 10px 16px;
+    text-align: right;
+    background: #fff;
+}
+
+.drawer-header{
+    height: 40px;
+    line-height: 40px;
+    width:100%;
+    background: #f7f7f7;
+    padding-left:15px;
+    margin-bottom:24px;
+    border-top:1px solid #eee;
+    border-bottom:1px solid #eee;
+}
+
+//审核日志时间轴通用样式
+.time-line-header{
+    padding: 30px 0 20px 0;
+    border-top: 1px solid $borderColor;
+    min-height: 40px;
+    position: relative;
+    >span{
+        font-size: 14px;
+        line-height: 30px;
+    }
+}
+.time-padding-content{
+    margin-top: 20px;
+    .time-line-body{
+        padding: 3px 0 0 3px;
+    }
+}
+.time-line-body{
+    .line-content{
+        position: relative;
+    }
+    .icon-correct-01{
+        color:$successColor;
+        font-size:14px;
+    }
+    .icon-down-01{
+        color:$errorColor;
+        font-size:14px;
+    }
+    .line-avatar{
+        width:30px;
+        height:30px;
+        border-radius: 50%;
+        vertical-align: middle;
+        position: absolute;
+        top:-7px;
+        left:0;
+    }
+    .line-right{
+        padding-left:40px;
+        .line-name{
+            margin-right:10px;
+            font-weight: 600;
+            color:$textColor;
+        }
+        .tag{
+            color:#fff;
+            background-color: $successColor;
+            border-radius: 2px;
+            padding:2px 4px;
+        }
+        .error-tag{
+            background-color: $errorColor;
+        }
+        .line-time{
+            color:$textColor;
+            float: right;
+        }
+        .line-remark{
+            margin-top: 10px;
+            .line-left-label{
+                color:$labelColor;
+                float: left;
+                width:70px;
+            }
+            .line-right-content{
+                color:$textColor;
+                float: left;
+                width:calc(100% - 70px);
+            }
+        }
+    }
+}
+
+.table>table{
+    width: 100%;
+    border:0;
+    margin:0;
+    border-collapse:collapse;
+    border-spacing:0;
+    td,th{
+        border: 1px solid $borderColor;
+    }
+    td{
+        text-align: center;
+    }
+}
+
+.descripe-icon{
+    display: inline-block;
+    background-color: $globalMainColor;
+    color:#fff;
+    width:20px;
+    height: 20px;
+    font-size: 12px;
+    font-weight: normal;
+    line-height: 20px;
+    border-radius: 3px;
+    text-align: center;
+}

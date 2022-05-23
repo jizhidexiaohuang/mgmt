@@ -1,0 +1,65 @@
+@import './../../assets/globalStyle.scss';
+.project-info{
+    display: block;
+    position: absolute;
+    left: 0;
+    top: -32px;
+    bottom:0;
+    z-index:999;
+    overflow: auto;
+    width: 100%;
+    background:#fff;
+    .close-icon{
+        position: absolute;
+        right:15px;
+        top:3px;
+        font-size: 20px;
+        cursor: pointer;
+    }
+    .project-title{
+        height: 45px;
+        line-height: 50px;
+        font-size: 14px;
+        padding-left:25px;
+        border-bottom:1px solid $borderColor;
+        width:100%;
+    }
+    .info-left{
+        float: left;
+        width:300px;
+        border-right:1px solid $borderColor;
+        height: calc(100% - 45px);
+        overflow: auto;
+        padding-top:15px;
+        position: relative;
+        .options{
+            position: absolute;
+            left: 270px;
+            top: 3px;
+            width: 20px;
+            height: 19px;
+            cursor: pointer;
+        }
+    }
+    .info-right{
+        float: left;
+        width:calc(100% - 300px);
+        height: calc(100% - 45px);
+        overflow: hidden;
+        .info-right-tabs{
+            border-bottom:1px solid $borderColor;
+        }
+        .tabs-bar{
+            border:none;
+        }
+        .common-tabs-bar{
+            width:600px;
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: space-around;
+            li{
+                padding:0 8px;
+            }
+        }
+    }
+}

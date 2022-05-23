@@ -1,0 +1,234 @@
+@import "./../../../assets/globalStyle";
+
+.position-manage-box{
+    display: flex;
+    justify-content: flex-start;
+    .content-left {
+        position: relative;
+        width: 20%;
+        min-width:200px;
+        height: 100%;
+        background: #ffffff;
+    }
+    .content-right{
+        background: #ffffff;
+        flex:1;
+        width: 80%;
+        height: 100%;
+        .right-box{
+            padding:10px 18px;
+            border-bottom:1px solid $borderColor;
+        }
+    }
+    .content-title{
+        height: 50px;
+        // background: #f7f7f7;
+        box-shadow: 0px -4px -5px 0px 
+        rgba(177, 177, 177, 0.55);
+        position: relative;
+        p{
+            color:$textColor;
+            line-height: 50px;
+            text-align: center;
+            font-size: 14px;
+        }
+        .add-role,.add-member{
+            position: absolute;
+            top:50%;
+            right:20px;
+            font-size: 18px;
+            transform: translateY(-50%);
+            color:$globalMainColor;
+            cursor: pointer;
+        }
+        .add-member{
+            font-size: 14px;
+            .icon-add-01{
+                padding-right:6px;
+            }
+        }
+    }
+    .content-left-box{
+        padding:30px 20px 15px 20px;
+        width:100%;
+        height: calc(100% - 50px);
+        position: relative;
+        border-right:1px solid $borderColor;
+        overflow-y: scroll;
+        overflow-x: hidden;
+        .search-input{
+            width:100%;
+            padding-bottom:25px;
+        }
+        ul.role-list{
+            height: calc(100% - 55px);
+            li.role-list-li{
+                width:100%;
+                background: #f7fafc;
+                height: 50px;
+                // line-height: 50px;
+                margin-bottom:15px;
+                border-radius: 2px;
+                cursor: pointer;
+                position: relative;
+                padding:10px 25px 0px 55px;
+                box-sizing: border-box;
+                &::before{
+                    position: absolute;
+                    content:'';
+                    left: 0;
+                    top: 0;
+                    width:2px;
+                    height: 100%;
+                    background: $globalMainColor;
+                    display: none;
+                }
+                .icon-lawyer-01{
+                    position: absolute;
+                    left:25px;
+                    top:12px;
+                    font-size: 14px;
+                    vertical-align: baseline;
+                }
+                .role-name{
+                    width:100%;
+                    height: 18px;
+                    font-size: 14px;
+                    display: inline-block;
+                }
+                .role-remark{
+                    display: inline-block;
+                    font-size: 12px;
+                    line-height: 14px;
+                    color: $textColor;
+                    width:100%;
+                }
+                .dropdown{
+                    position: absolute;
+                    right: 20px;
+                    top: 5px;
+                }
+                .icon-dot{
+                    position: absolute;
+                    width: 8px;
+                    margin: 0 auto;
+                    line-height: 5px;
+                    font-size: 20px;
+                    word-wrap: break-word;
+                }
+                &.active{
+                    color:$globalMainColor;
+                    &::before{display: block;}
+                }
+            }
+        }
+    }
+    .content-right-top{
+        padding:18px;
+        .contanier{
+            background: #f7fafc;
+            max-height: 110px;
+            padding:30px 0px 20px 36px;
+            position: relative;
+            overflow-y: scroll;
+            .title{
+                color: $textColor;
+                position: absolute;
+                top:14px;
+                left:25px;
+                font-size: 14px;
+            }
+            ul.member-list{
+                display: flex;
+                flex-wrap: wrap;
+                height: 100%;
+                overflow: hidden;
+                li{
+                    width: 110px;
+                    line-height: 30px;
+                    height: 30px;
+                    background: #fff;
+                    padding-left:22px;
+                    padding-right:22px;
+                    border-radius: 2px;
+                    margin-right:14px;
+                    margin-bottom:10px;
+                    position: relative;
+                    span.member-name{
+                        display: inline-block;
+                        width:100%;
+                    }
+                    span.icon-trash-01{
+                        position: absolute;
+                        right:12px;
+                        top:50%;
+                        transform: translateY(-50%);
+                        color:$errorColor;
+                        float: right;
+                        line-height: 30px;
+                        cursor: pointer;
+                    }
+                }
+            }
+            p.show-all{
+                position: absolute;
+                width: 100%;
+                left: 0;
+                bottom: 0;
+                line-height: 30px;
+                text-align: center;
+                color:$globalMainColor;
+                cursor: pointer;
+                .icon-drop-01{
+                    padding-right:6px;
+                }
+            }
+        }
+    }
+    .content-right-bottom{
+        height: 100%;
+        padding:18px 18px 0px 18px;
+        .table-block{
+            overflow-y: scroll;
+            >table:not(:last-child){
+                tr{
+                    &:last-child{
+                        td{
+                            border-bottom: none;
+                        }
+                    }
+                }
+            }
+        }
+        .btn-block{
+            width:100%;
+            height: 50px;
+            background:#fff;
+            line-height: 50px;
+            text-align: right;
+            box-shadow: 0px 2px 13px 0px 
+		    rgba(177, 177, 177, 0.26);
+        }
+    }
+    table{
+        border-spacing: 0;
+        border-collapse: collapse;
+        width:100%;
+        &:first-child{
+            border-top:1px solid $borderColor;
+        }
+        td{
+            border:1px solid $borderColor;
+            line-height: 50px;
+            padding:0 0px 0px 15px;
+            span{
+                margin:0px 10px;
+            }
+        }
+        tr:nth-of-type(1){
+            td{
+                border-top:none;
+            }
+        }
+    }
+}
