@@ -14,8 +14,6 @@ module.exports = {
         '/api': {
             // target: 'http://myapi.utools.club/',
             // target:'http://192.168.1.30:10001',
-            // target:'http://192.168.1.125:10001',
-            // target:'http://192.168.4.239:10001',
             target:'http://test.gateway.andunip.cn',
             secure: false,
             changeOrigin: true,
